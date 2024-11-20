@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -37,11 +36,11 @@ public class EnemyAI : MonoBehaviour
     {
         switch (currentState)
         {
-            case 1: //Движение
+            case 1: //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
                 anim.SetBool("Move", true);
                 allowToMove = true;
                 break;
-            case 2: //Атака
+            case 2: //пїЅпїЅпїЅпїЅпїЅ
                 anim.SetBool("Move", false);
                 anim.SetTrigger("Attack");
                 allowToMove = false;
