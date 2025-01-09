@@ -31,12 +31,7 @@ public class Health : MonoBehaviour
     {
         if (invic)
         {
-            invTime += Time.deltaTime;
-
-            if (invTime >= invTimeMax)
-            {
-                invic = false;
-            }
+            Invicible();
         }
     }
     public void Damage(int damageINC)
@@ -74,5 +69,15 @@ public class Health : MonoBehaviour
     public void Dissapear()
     {
         gameObject.SetActive(false);
+    }
+
+    private void Invicible()
+    {
+        invTime += Time.deltaTime;
+
+        if (invTime >= invTimeMax)
+        {
+            invic = false;
+        }
     }
 }

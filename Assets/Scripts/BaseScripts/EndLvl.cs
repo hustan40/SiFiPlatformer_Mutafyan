@@ -28,8 +28,7 @@ public class EndLvl : MonoBehaviour
       
         if (info.score >= scoreToHealth)
         {
-            hpPlayer.healthPoint++;
-            scoreToHealth += scoreToHealth;
+            AddHealth();
         }    
 
         if (hpPlayer.healthPoint <= 0)
@@ -61,5 +60,11 @@ public class EndLvl : MonoBehaviour
             return (60 - Convert.ToInt32(timePlayer)) * timeCoef;  
        }
        
+    }
+
+    private void AddHealth()
+    {
+        hpPlayer.healthPoint++;
+        scoreToHealth += scoreToHealth;
     }
 }

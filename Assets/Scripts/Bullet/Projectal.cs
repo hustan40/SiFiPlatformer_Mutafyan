@@ -7,7 +7,7 @@ public class Projectal : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private AudioSource expl;
     private bool hit = false;
-    private float direction;
+    private float direction, movementSpeed;
     private float lifeTime = 0;
     private BoxCollider2D boxCollider;
     private Animator anim;
@@ -26,10 +26,8 @@ public class Projectal : MonoBehaviour
             return;
         }
 
-        float movementSpeed = speed * Time.deltaTime * direction;
-        transform.Translate(movementSpeed,0,0);
-        lifeTime += Time.deltaTime;
-
+        LifeBullet();
+        
         if (lifeTime > 5) 
         {
             Deactivate();
@@ -64,6 +62,7 @@ public class Projectal : MonoBehaviour
             localScaleX = -localScaleX;
         }
 
+        movementSpeed= speed * Time.deltaTime * direction;
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
@@ -71,8 +70,15 @@ public class Projectal : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    
     private void ExplosionSound()
     {
         expl.Play(0);
+    }
+
+    private void LifeBullet()
+    {
+        transform.Translate(movementSpeed,0,0);
+        lifeTime += Time.deltaTime;
     }
 }

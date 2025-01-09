@@ -34,13 +34,18 @@ public class DamageZone : MonoBehaviour
     {
         if (inDanger == true)
         {
-            timeToDamage += Time.deltaTime;
-            
-            if (timeToDamage >= maxtimeToDamage)
-            {
-                health.Damage(damageDeal);
-                timeToDamage = 0;
-            }
+            DangerZone();
+        }
+    }
+
+    private void DangerZone()
+    {
+        timeToDamage += Time.deltaTime;
+        
+        if (timeToDamage >= maxtimeToDamage)
+        {
+            health.Damage(damageDeal);
+            timeToDamage = 0;
         }
     }
 }

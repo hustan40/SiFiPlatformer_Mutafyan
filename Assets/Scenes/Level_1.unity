@@ -1686,6 +1686,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2361233567737195321, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -1886,6 +1890,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2361233567737195321, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -3411,6 +3419,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2361233567737195321, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -3649,6 +3661,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
     - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: enemyName
       value: Player
       objectReference: {fileID: 0}
@@ -3713,6 +3729,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: enemyName
       value: Player
@@ -5224,6 +5244,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2361233567737195321, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -5425,6 +5449,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
     - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: enemyName
       value: Player
       objectReference: {fileID: 0}
@@ -5489,6 +5517,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: enemyName
       value: Player
@@ -21114,6 +21146,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165300182}
     m_Modifications:
+    - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2361233567737195321, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: m_Name
       value: Bullet
@@ -22203,7 +22239,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1224419200101113739, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: speed
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2361233567737195321, guid: 93b0f0baf44b45149915bd02dc31d19a, type: 3}
       propertyPath: m_Name

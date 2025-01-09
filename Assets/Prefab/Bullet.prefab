@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36afa907e3e3ba841bab2772b8673bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   expl: {fileID: 8648432988391471207}
   damageDeal: 1
   enemyName: Enemy

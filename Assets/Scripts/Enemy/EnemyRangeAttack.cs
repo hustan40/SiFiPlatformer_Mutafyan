@@ -9,9 +9,6 @@ public class EnemyRangeAttack : MonoBehaviour
     [SerializeField] private Animator anim;
     public void Attack()
     {
-        //anim.SetTrigger("Attack");
-      
-
         fireballs[FindFireball()].transform.position = firePoint.position;
         fireballs[FindFireball()].GetComponent<Projectal>().SetDirection(Mathf.Sign(transform.localScale.x));
         fireballs[FindFireball()].GetComponent<Projectal>().damageDeal = 2;

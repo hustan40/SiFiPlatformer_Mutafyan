@@ -42,24 +42,13 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.LeftControl) && onGround && health.healthPoint > 0)
         {
-            capsuleCollider.offset = new Vector2(0f, -0.12f);
-            capsuleCollider.size = new Vector2(0.12f, 0.24f);
-            anim.SetBool("Crouch", true);
-            crouch = true;
-            speed *= 0.5f;
+            CrouchPressed();
         }
 
         if (Input.GetKeyUp(KeyCode.LeftControl) && health.healthPoint > 0)
         {
-            capsuleCollider.offset = new Vector2(0f, -0.04f);
-            capsuleCollider.size = new Vector2(0.12f, 0.4f);
-            anim.SetBool("Crouch", false);
-            crouch = false;
-            speed *= 2f;
+            CrouchRealed();
         }
-
-
-
     }
 
     private void FixedUpdate()
@@ -75,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    private void FlipSprite(float horinput) //Меняет сторону спрайта в зависимости от движения игрока
+    private void FlipSprite(float horinput) //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     {
         if (horinput > 0.01f)
         {
@@ -90,5 +79,22 @@ public class PlayerMovement : MonoBehaviour
     public bool canAttack()
     {
         return !crouch && health.healthPoint > 0;
+    }
+    public void CrouchPressed()
+    {
+        capsuleCollider.offset = new Vector2(0f, -0.12f);
+        capsuleCollider.size = new Vector2(0.12f, 0.24f);
+        anim.SetBool("Crouch", true);
+        crouch = true;
+        speed *= 0.5f;
+    }
+
+    public void CrouchRealed()
+    {
+        capsuleCollider.offset = new Vector2(0f, -0.04f);
+        capsuleCollider.size = new Vector2(0.12f, 0.4f);
+        anim.SetBool("Crouch", false);
+        crouch = false;
+        speed *= 2f;
     }
 }

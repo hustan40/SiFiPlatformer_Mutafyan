@@ -27,17 +27,12 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && cooldownTimer >= attackCooldown && playerMovement.canAttack() && bulletsCount > 0)
         {
-            Attack();
-            bulletsCount--;
-            infoUpdate.bullet.text = bulletsCount.ToString();
+            AttackClicked();
         }
-
 
         if (Input.GetKey(KeyCode.R))
         {
-            bulletsCount = 0;
-            infoUpdate.bullet.text = bulletsCount.ToString();
-            reloadTimer = 0;
+            ReloadClicked();
         }
 
         if (Input.GetMouseButtonDown(0) && bulletsCount <= 0)
@@ -47,14 +42,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (bulletsCount == 0)
         {
-            reloadTimer += Time.deltaTime;
-            cooldown.fillAmount = reloadTimer / reloadCooldown;
-
-            if (reloadTimer >= reloadCooldown)
-            {
-                bulletsCount = bulletsMax;
-                infoUpdate.bullet.text = bulletsCount.ToString();
-            }
+            AltReload();
         }
 
         if (cooldownTimer <= attackCooldown)
@@ -76,9 +64,35 @@ public class PlayerAttack : MonoBehaviour
     {
         for (int i = 0; i < fireballs.Length; i++)
         {
+
             if (!fireballs[i].activeInHierarchy)
                 return i;
         }
         return 0;
+    }
+
+    private void AttackClicked()
+    {
+        Attack();
+        bulletsCount--;
+        infoUpdate.bullet.text = bulletsCount.ToString();
+    }
+    private void ReloadClicked()
+    {
+        bulletsCount = 0;
+        infoUpdate.bullet.text = bulletsCount.ToString();
+        reloadTimer = 0;
+    }
+
+    private void AltReload()
+    {
+        reloadTimer += Time.deltaTime;
+        cooldown.fillAmount = reloadTimer / reloadCooldown;
+
+        if (reloadTimer >= reloadCooldown)
+        {
+            bulletsCount = bulletsMax;
+            infoUpdate.bullet.text = bulletsCount.ToString();
+        }
     }
 }
